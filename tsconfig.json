@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "strict": true, // Add this line to enable strict mode
+    "skipLibCheck": true, // Recommended to avoid checking declaration files
+    "esModuleInterop": true // Allows interoperability between CommonJS and ES modules
+  },
+  "include": ["src/**/*.ts"], // Specify the files to include in compilation
+  "exclude": ["node_modules"] // Specify the files to exclude from compilation
+}

@@ -1,0 +1,28 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("postgresql://postgres:misha2023@localhost:5432/myDb") // You can use environment variables for configuration
+}
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/prisma-client" // Output directory for the Prisma client
+}
+
+model Station {
+  id              Int      @id @default(autoincrement())
+  kioskId         String   @unique
+  bikesAvailable  Int
+  docksAvailable  Int
+  totalDocks      Int
+  timestamp       DateTime @default(now())
+}
+
+model WeatherData {
+  id           Int      @id @default(autoincrement())
+  city         String
+  temperature  Float
+  humidity     Float
+  description  String
+  timestamp    DateTime @default(now())
+}
+
